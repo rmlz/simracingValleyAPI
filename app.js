@@ -8,6 +8,11 @@ const db = require('./database/config')
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const driversRouter = require('./routes/drivers')
+const raceRecordsRouter = require('./routes/raceRecords')
+const raceResultRouter = require('./routes/raceResults')
+const RatingRouter = require('./routes/histRating')
+const RankRouter = require('./routes/histRank')
 
 const app = express();
 
@@ -26,6 +31,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/drivers', driversRouter);
+app.use('/records', raceRecordsRouter);
+app.use('/results', raceResultRouter);
+app.use('/rating', RatingRouter);
+app.use('/ranking', RankRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

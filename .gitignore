@@ -6,3 +6,5 @@
 \.idea/runConfigurations/bin_www\.xml
 
 node_modules/
+
+\.idea/vcs\.xml
